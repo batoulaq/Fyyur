@@ -19,6 +19,7 @@ from forms import *
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://postgres:1234@localhost:5432/fyyur'
 moment = Moment(app)
 app.config.from_object('config')
 db = SQLAlchemy(app)
